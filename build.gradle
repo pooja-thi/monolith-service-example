@@ -304,28 +304,34 @@ wrapper {
 
 
 if (project.hasProperty("nodeInstall")) {
-    // Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154
-    OperatingSystem os = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentOperatingSystem();
-    Architecture arch = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentArchitecture();
-    Boolean downloadNode = !os.isMacOsX() || arch.isAmd64()
+//    // Workaround node grade plugin not working on apple silicon https://github.com/node-gradle/gradle-node-plugin/issues/154
+//    OperatingSystem os = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentOperatingSystem();
+//    Architecture arch = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentArchitecture();
+//    Boolean downloadNode = !os.isMacOsX() || arch.isAmd64()
+//    node {
+//        version = "16.13.1"
+//        npmVersion = "8.3.0"
+//        download = downloadNode
+//    }
+//
+//    // Copy local node and npm to a fixed location for npmw
+//    def fixedNode = tasks.register("fixedNode", Copy) {
+//        from nodeSetup
+//        into 'build/node'
+//    }
+//    tasks.named("nodeSetup").configure { finalizedBy fixedNode }
+//
+//    def fixedNpm = tasks.register("fixedNpm", Copy) {
+//        from npmSetup
+//        into 'build/node'
+//    }
+//    tasks.named("npmSetup").configure { finalizedBy fixedNpm }
+
     node {
         version = "16.13.1"
         npmVersion = "8.3.0"
-        download = downloadNode
+        download = true
     }
-
-    // Copy local node and npm to a fixed location for npmw
-    def fixedNode = tasks.register("fixedNode", Copy) {
-        from nodeSetup
-        into 'build/node'
-    }
-    tasks.named("nodeSetup").configure { finalizedBy fixedNode }
-
-    def fixedNpm = tasks.register("fixedNpm", Copy) {
-        from npmSetup
-        into 'build/node'
-    }
-    tasks.named("npmSetup").configure { finalizedBy fixedNpm }
 }
 compileJava.dependsOn processResources
 processResources.dependsOn bootBuildInfo

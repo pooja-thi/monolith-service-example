@@ -1,0 +1,13 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+resources:
+  # Individual apps
+  - pooja_thittamaranahalli_backendtasks-k8s/pooja_thittamaranahalli_backendtasks-deployment.yml
+  - pooja_thittamaranahalli_backendtasks-k8s/pooja_thittamaranahalli_backendtasks-service.yml
+  - pooja_thittamaranahalli_backendtasks-k8s/pooja_thittamaranahalli_backendtasks-postgresql.yml
+  - pooja_thittamaranahalli_backendtasks-k8s/pooja_thittamaranahalli_backendtasks-ingress.yml
+  - pooja_thittamaranahalli_backendtasks-k8s/jwt-secret.yml
+# service discovery eureka/consul
+
+patchesJson6902:

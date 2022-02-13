@@ -14,6 +14,10 @@ It is a monolith project with both backend and frontend.
 - Authentication: Jwt authentication
 - Language support: English, German
 
+Overview of the service working in it's entirity:
+
+[service-working-video](service-working-video.mp4)
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:

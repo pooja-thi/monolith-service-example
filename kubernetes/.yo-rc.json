@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["pooja_thittamaranahalli_backendtasks"],
+    "directoryPath": "../../",
+    "clusteredDbApps": {},
+    "serviceDiscoveryType": false,
+    "jwtSecretKey": "NGM0MmYwMzVmMDQ4MDQ1MzJkN2M5MzY5OGRiMmFkOGJjMjZmNmQ0YzQ1MzM3YTk2M2M5ZDZiY2U5NjU5ODRmNmU4MGRjNDhhY2EwYmIyNWFjM2NjZDY1MmMwNzRiZmVmZGFmMQ==",
+    "dockerRepositoryName": "",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "Ingress",
+    "kubernetesUseDynamicStorage": false,
+    "ingressType": "nginx",
+    "ingressDomain": "192.168.99.100.nip.io",
+    "monitoring": "no",
+    "istio": false
+  }
+}

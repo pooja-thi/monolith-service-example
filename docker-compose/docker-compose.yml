@@ -1,0 +1,18 @@
+services:
+  pooja_thittamaranahalli_backendtasks:
+    image: pooja_thittamaranahalli_backendtasks
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,api-docs
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://pooja_thittamaranahalli_backendtasks-postgresql:5432/pooja_thittamaranahalli_backendtasks
+      - SPRING_LIQUIBASE_URL=jdbc:postgresql://pooja_thittamaranahalli_backendtasks-postgresql:5432/pooja_thittamaranahalli_backendtasks
+      - JHIPSTER_SLEEP=30
+    ports:
+      - '8080:8080'
+  pooja_thittamaranahalli_backendtasks-postgresql:
+    image: postgres:13.5
+    environment:
+      - POSTGRES_USER=pooja_thittamaranahalli_backendtasks
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust

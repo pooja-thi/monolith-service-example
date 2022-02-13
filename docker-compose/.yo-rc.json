@@ -1,0 +1,11 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["pooja_thittamaranahalli_backendtasks"],
+    "directoryPath": "../../",
+    "gatewayType": "SpringCloudGateway",
+    "clusteredDbApps": {},
+    "monitoring": "no",
+    "serviceDiscoveryType": false,
+    "jwtSecretKey": "MDRjZWQyODgxYWVmOGFkMmJlNDkzYzU4YjdlMzQ5MTRkZDQ1MDc4ODY0OGU4NDU0YjhjNDhjYjIyNmZhNGZmM2VhZTg0MWZkYzcwNDUzMzJkNjI5YWJlNWY1MzJhOGUyOTRhOQ=="
+  }
+}

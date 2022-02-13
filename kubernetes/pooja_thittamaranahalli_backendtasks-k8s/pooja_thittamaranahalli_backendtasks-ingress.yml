@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: pooja_thittamaranahalli_backendtasks
+  namespace: default
+spec:
+  rules:
+    - host: pooja_thittamaranahalli_backendtasks.default.192.168.99.100.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: pooja_thittamaranahalli_backendtasks
+              servicePort: 8080

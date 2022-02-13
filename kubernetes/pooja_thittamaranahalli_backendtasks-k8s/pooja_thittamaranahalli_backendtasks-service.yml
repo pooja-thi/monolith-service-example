@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pooja_thittamaranahalli_backendtasks
+  namespace: default
+  labels:
+    app: pooja_thittamaranahalli_backendtasks
+spec:
+  selector:
+    app: pooja_thittamaranahalli_backendtasks
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
