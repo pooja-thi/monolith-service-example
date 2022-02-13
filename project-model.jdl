@@ -1,0 +1,22 @@
+
+entity Project {
+	name String required
+}
+
+entity Floor {
+	level Integer required
+}
+
+entity Room {
+	mediaURL String
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Project to Floor{project}
+    Floor to Room{floor}
+}
+
+
+// Set service options to all except few
+service all with serviceImpl

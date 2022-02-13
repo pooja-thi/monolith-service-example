@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="floor">
+      <h2 data-cy="floorDetailsHeading"><span jhiTranslate="poojaThittamaranahalliBackendtasksApp.floor.detail.title">Floor</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ floor.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="poojaThittamaranahalliBackendtasksApp.floor.level">Level</span></dt>
+        <dd>
+          <span>{{ floor.level }}</span>
+        </dd>
+        <dt><span jhiTranslate="poojaThittamaranahalliBackendtasksApp.floor.project">Project</span></dt>
+        <dd>
+          <div *ngIf="floor.project">
+            <a [routerLink]="['/project', floor.project?.id, 'view']">{{ floor.project?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/floor', floor.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "poojaThittamaranahalliBackendtasksApp": {
+    "floor": {
+      "home": {
+        "title": "Floors",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Floor erstellen",
+        "createOrEditLabel": "Floor erstellen oder bearbeiten",
+        "notFound": "Keine Floors gefunden"
+      },
+      "created": "Floor erstellt mit ID {{ param }}",
+      "updated": "Floor aktualisiert mit ID {{ param }}",
+      "deleted": "Floor gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Floor {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Floor"
+      },
+      "id": "ID",
+      "level": "Level",
+      "room": "Room",
+      "project": "Project"
+    }
+  }
+}

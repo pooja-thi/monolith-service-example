@@ -50,6 +50,8 @@
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "languages": ["en", "de"],
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "entities": ["Project", "Floor", "Room"],
+    "lastLiquibaseTimestamp": 1644769126000
   }
 }

@@ -1,0 +1,34 @@
+{
+  "name": "Floor",
+  "fields": [
+    {
+      "fieldName": "level",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "room",
+      "otherEntityRelationshipName": "floor",
+      "relationshipName": "room"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "floor",
+      "relationshipName": "project"
+    }
+  ],
+  "entityTableName": "floor",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20220213161845"
+}
