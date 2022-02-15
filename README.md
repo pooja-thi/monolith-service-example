@@ -1,6 +1,6 @@
 # monolith-service-example
 
-This application tries to achieve all the tasks defined by Holobuilder.
+
 
 ## Project Structure
 
